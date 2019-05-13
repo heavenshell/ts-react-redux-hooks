@@ -10,7 +10,7 @@ PoC of Typescript + react-redux@v7.1.0-alpha.4 + React Hooks + react-router
 
 ## Thanks
 
-A lot of code based on [@dkimura](https://github.com/dkimura)'s code.
+`modules` are based on [@dkimura](https://github.com/dkimura)'s code.
 
 ## License
 

@@ -6,7 +6,7 @@ import { ThunkAction } from 'redux-thunk'
 import { ReduxState } from '.'
 
 // API
-const api = axios.create({
+export const api = axios.create({
   baseURL: 'https://www.reddit.com/r',
 })
 
@@ -19,9 +19,8 @@ export type SubRedditModel = {
   data: Child[]
 }
 
-const getSubreddit = (subreddit: string) => {
-  return api.get<SubRedditModel>(`/${subreddit}.json`)
-}
+export const getSubreddit = (subreddit: string) =>
+  api.get<SubRedditModel>(`/${subreddit}.json`)
 
 // Reducer
 export type State = {

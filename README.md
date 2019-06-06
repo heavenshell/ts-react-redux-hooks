@@ -1,6 +1,6 @@
 # ts-react-redux-hooks
 
-PoC of Typescript + react-redux@v7.1.0-alpha.4 + React Hooks + react-router
+PoC of Typescript + react-redux@v7.1.0-rc.1 + React Hooks + react-router
 
 ## redux
 

@@ -2,7 +2,7 @@
   "name": "react-redux-hooks",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "private": true,
   "dependencies": {
     "antd": "3.19.3",

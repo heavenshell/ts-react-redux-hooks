@@ -3,7 +3,7 @@ import * as React from 'react'
 import { RouteComponentProps } from 'react-router-dom'
 import * as yup from 'yup'
 
-import SubredditComponent from '../components/Subreddit'
+import SubredditComponent from '../components/pages/Subreddit'
 import { useSubreddit, MapProps, MapDispatch } from './useSubreddit'
 
 const validationSchema = yup.object().shape({

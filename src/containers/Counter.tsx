@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { AnyAction } from 'redux'
 import { ThunkDispatch } from 'redux-thunk'
 
-import CounterComponent from '../components/Counter'
+import CounterComponent from '../components/pages/Counter'
 import { ReduxState } from '../modules'
 
 import { increment, decrement } from '../modules/counter'

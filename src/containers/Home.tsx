@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import { RouteComponentProps } from 'react-router-dom'
 
-import HomeComponent from '../components/Home'
+import HomeComponent from '../components/pages/Home'
 
 type Props = RouteComponentProps
 

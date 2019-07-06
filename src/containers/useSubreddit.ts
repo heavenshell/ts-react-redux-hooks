@@ -6,7 +6,7 @@ import { RouteComponentProps } from 'react-router-dom'
 import { AnyAction } from 'redux'
 import { ThunkDispatch } from 'redux-thunk'
 
-import { Props as ViewProps } from '../components/Subreddit'
+import { Props as ViewProps } from '../components/pages/Subreddit'
 import { ReduxState } from '../modules'
 import { fetchSubreddit, queries, SubRedditModel } from '../modules/subreddit'
 

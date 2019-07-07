@@ -1,5 +1,7 @@
 # ts-react-redux-hooks
 
+[![Build Status](https://travis-ci.org/heavenshell/ts-react-redux-hooks.svg?branch=master)](https://travis-ci.org/heavenshell/ts-react-redux-hooks)
+
 PoC of Typescript + react-redux@v7.1.0 + React Hooks + react-router
 
 ## redux

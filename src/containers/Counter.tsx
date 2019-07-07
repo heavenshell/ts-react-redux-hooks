@@ -18,8 +18,8 @@ const mapProps = ({ counter }: ReduxState): MapProps => ({
 })
 
 type MapDispatch = {
-  increment: () => any
-  decrement: () => any
+  increment: () => any // eslint-disable-line @typescript-eslint/no-explicit-any
+  decrement: () => any // eslint-disable-line @typescript-eslint/no-explicit-any
 }
 
 const mapDispatch = (

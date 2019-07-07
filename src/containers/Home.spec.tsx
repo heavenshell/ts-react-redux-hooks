@@ -6,15 +6,13 @@ import { renderHook, act } from '@testing-library/react-hooks'
 import createSink from '../__fixtures__/createSink'
 import TestProvider from '../__fixtures__/TestProvider'
 
-import Home, { handlers } from './Home'
+import Home, { useHandlers } from './Home'
 
 describe('<Home />', () => {
   const Comp = createSink(props => props)
 
   it('should onCounterLinkClick', () => {
-    const renderer = mount(
-      <TestProvider component={Comp} paths={['/']} />
-    )
+    const renderer = mount(<TestProvider component={Comp} paths={['/']} />)
     const { history, location, match } = renderer.find(Comp).props()
     const mockHistoryPush = jest.fn().mockName('history.push')
     history.push = mockHistoryPush
@@ -23,9 +21,12 @@ describe('<Home />', () => {
       preventDefault: jest.fn().mockName('preventDefault'),
     }
 
-    const { result } = renderHook(() => handlers({ history, location, match }))
+    const { result } = renderHook(() =>
+      useHandlers({ history, location, match })
+    )
     const { onCounterLinkClick } = result.current
     act(() => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       onCounterLinkClick(mockClickEvent as any)
     })
 
@@ -37,9 +38,7 @@ describe('<Home />', () => {
   })
 
   it('should onSubredditLinkClick', () => {
-    const renderer = mount(
-      <TestProvider component={Comp} paths={['/']} />
-    )
+    const renderer = mount(<TestProvider component={Comp} paths={['/']} />)
     const { history, location, match } = renderer.find(Comp).props()
     const mockHistoryPush = jest.fn().mockName('history.push')
     history.push = mockHistoryPush
@@ -48,9 +47,12 @@ describe('<Home />', () => {
       preventDefault: jest.fn().mockName('preventDefault'),
     }
 
-    const { result } = renderHook(() => handlers({ history, location, match }))
+    const { result } = renderHook(() =>
+      useHandlers({ history, location, match })
+    )
     const { onSubredditLinkClick } = result.current
     act(() => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       onSubredditLinkClick(mockClickEvent as any)
     })
 
@@ -62,9 +64,7 @@ describe('<Home />', () => {
   })
 
   it('should onSubredditLinkClick - without createSink', () => {
-    const renderer = mount(
-      <TestProvider component={Home} paths={['/']} />
-    )
+    const renderer = mount(<TestProvider component={Home} paths={['/']} />)
     const { history, location, match } = renderer.find(Home).props()
 
     const mockHistoryPush = jest.fn().mockName('history.push')
@@ -87,9 +87,7 @@ describe('<Home />', () => {
   })
 
   it('should onSubredditLinkClick - without createSink', () => {
-    const renderer = mount(
-      <TestProvider component={Home} paths={['/']} />
-    )
+    const renderer = mount(<TestProvider component={Home} paths={['/']} />)
     const { history, location, match } = renderer.find(Home).props()
 
     const mockHistoryPush = jest.fn().mockName('history.push')

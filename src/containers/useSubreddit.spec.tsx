@@ -19,12 +19,12 @@ describe('containers/useSubreddit', () => {
       .mockName('fetchSubreddit')
       .mockResolvedValue('fetch success')
 
-    jest.spyOn(hooks, 'mapDispatch').mockImplementation(
-      () => ({ fetchSubreddit })
-    )
+    jest
+      .spyOn(hooks, 'mapDispatch')
+      .mockImplementation(() => ({ fetchSubreddit }))
 
     const subredditState = {
-      isLoading: false
+      isLoading: false,
     }
     const initialState: ReduxState = configureInitialState({ subredditState })
 
@@ -50,12 +50,12 @@ describe('containers/useSubreddit', () => {
       .mockName('fetchSubreddit')
       .mockResolvedValue('fetch success')
 
-    jest.spyOn(hooks, 'mapDispatch').mockImplementation(
-      () => ({ fetchSubreddit })
-    )
+    jest
+      .spyOn(hooks, 'mapDispatch')
+      .mockImplementation(() => ({ fetchSubreddit }))
 
     const subredditState = {
-      isLoading: false
+      isLoading: false,
     }
     const initialState: ReduxState = configureInitialState({ subredditState })
 
@@ -76,15 +76,12 @@ describe('containers/useSubreddit', () => {
 
   it('should call onLinkClick', () => {
     const renderer = mount(
-      <TestProvider
-        component={Comp}
-        paths={['/subreddit']}
-      />
+      <TestProvider component={Comp} paths={['/subreddit']} />
     )
 
     const { history, location, match } = renderer.find(Comp).props()
     const { result } = renderHook(() => {
-      return hooks.subredditHandlers({ history, location, match })
+      return hooks.useSubredditHandlers({ history, location, match })
     })
     const { onLinkClick } = result.current
 
@@ -92,32 +89,33 @@ describe('containers/useSubreddit', () => {
       preventDefault: jest.fn().mockName('preventDefault'),
     }
     window.open = jest.fn()
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     onLinkClick(mockClickEvent as any, 'cat')
     expect(window.open).toBeCalledWith('https://www.reddit.com/cat')
   })
 
   it('should onSubmit - add query params to location.search', () => {
     const renderer = mount(
-      <TestProvider
-        component={Comp}
-        paths={['/subreddit']}
-      />
+      <TestProvider component={Comp} paths={['/subreddit']} />
     )
 
     const { history, location, match } = renderer.find(Comp).props()
     expect(location.search).toBe('')
 
     const { result } = renderHook(() => {
-      return hooks.subredditHandlers({ history, location, match })
+      return hooks.useSubredditHandlers({ history, location, match })
     })
     const { onSubmit } = result.current
 
     const resetForm = jest.fn().mockName('resetForm')
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     onSubmit({ subreddit: 'cat' }, { resetForm } as any)
     renderer.update()
 
-    const { location: { search } } = renderer.find(Comp).props()
+    const {
+      location: { search },
+    } = renderer.find(Comp).props()
     expect(search).toBe('?value=cat')
   })
 })

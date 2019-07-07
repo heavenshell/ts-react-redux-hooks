@@ -7,8 +7,8 @@ import { State as SubredditState } from '../modules/subreddit'
 const defaultState = (param: any) => (param ? param : { isLoading: false })
 
 export const configureInitialState = (params: {
-  counterState?: CounterState,
-  subredditState?: SubredditState,
+  counterState?: CounterState
+  subredditState?: SubredditState
 }): ReduxState => ({
   counter: params.counterState ? params.counterState : { count: 0 },
   subreddit: defaultState(params.subredditState),

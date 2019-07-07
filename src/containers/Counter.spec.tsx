@@ -1,22 +1,18 @@
 import * as React from 'react'
-
 import { mount } from 'enzyme'
 
 import TestProvider from '../__fixtures__/TestProvider'
-
 import Counter from './Counter'
 
 describe('<Counter />', () => {
   it('should onIncrementClick', () => {
-    const renderer = mount(
-      <TestProvider component={Counter} paths={['/']} />
-    )
+    const renderer = mount(<TestProvider component={Counter} paths={['/']} />)
     const count = 0
     const increment = jest.fn()
     const decrement = jest.fn()
-    const { onIncrementClick } = renderer.props().component.WrappedComponent(
-      { count, increment, decrement }
-    ).props
+    const { onIncrementClick } = renderer
+      .props()
+      .component.WrappedComponent({ count, increment, decrement }).props
 
     onIncrementClick()
     renderer.update()
@@ -28,15 +24,13 @@ describe('<Counter />', () => {
   })
 
   it('should onDecrementClick', () => {
-    const renderer = mount(
-      <TestProvider component={Counter} paths={['/']} />
-    )
+    const renderer = mount(<TestProvider component={Counter} paths={['/']} />)
     const count = 0
     const increment = jest.fn()
     const decrement = jest.fn()
-    const { onDecrementClick } = renderer.props().component.WrappedComponent(
-      { count, increment, decrement }
-    ).props
+    const { onDecrementClick } = renderer
+      .props()
+      .component.WrappedComponent({ count, increment, decrement }).props
 
     onDecrementClick()
     renderer.update()

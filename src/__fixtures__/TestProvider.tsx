@@ -12,19 +12,11 @@ type RouterInitialProps = {
   search?: string
 }
 
-// type Props = MemoryRouterProps & {
-//   component: RouteProps['component']
-//   paths: string[]
-//   initialState?: ReduxState
-//   initialPath?: string
-//   params?: RouteComponentProps
-//   search?: string
-// }
-
-type Props = MemoryRouterProps & RouterInitialProps & {
-  component: RouteProps['component']
-  initialState?: ReduxState
-}
+type Props = MemoryRouterProps &
+  RouterInitialProps & {
+    component: RouteProps['component']
+    initialState?: ReduxState
+  }
 
 const TestProvider: React.FC<Props> = ({
   component: Component,

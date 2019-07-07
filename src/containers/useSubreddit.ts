@@ -34,9 +34,12 @@ export const mapDispatch = (
   fetchSubreddit: subbreddit => dispatch(fetchSubreddit(subbreddit)),
 })
 
-export const subredditHandlers = ({ history, location }: RouteComponentProps) => {
+export const useSubredditHandlers = ({
+  history,
+  location,
+}: RouteComponentProps) => {
   const onSubmit: ViewProps['onSubmit'] = useCallback(
-    (data) => {
+    data => {
       const { value } = parse(location.search)
       if (value === data.subreddit) {
         return
@@ -86,7 +89,7 @@ export const useSubreddit = ({
     mapProps({ location, history, match })
   )
 
-  const { onLinkClick, onSubmit } = subredditHandlers({
+  const { onLinkClick, onSubmit } = useSubredditHandlers({
     history,
     location,
     match,

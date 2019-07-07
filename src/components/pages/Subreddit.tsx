@@ -84,7 +84,7 @@ const Subreddit: React.FC<Props> = ({
           size="large"
           dataSource={posts}
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          renderItem={(item: any) => (
+          renderItem={item => (
             <List.Item
               key={item.title}
               extra={

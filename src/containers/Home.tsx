@@ -7,7 +7,7 @@ import HomeComponent from '../components/pages/Home'
 
 type Props = RouteComponentProps
 
-export const handlers = ({ history }: RouteComponentProps) => ({
+export const useHandlers = ({ history }: RouteComponentProps) => ({
   onCounterLinkClick: useCallback(
     (event: React.MouseEvent<HTMLAnchorElement>) => {
       event.preventDefault()
@@ -21,11 +21,11 @@ export const handlers = ({ history }: RouteComponentProps) => ({
       return history.push('/subreddit')
     },
     [history]
-  )
+  ),
 })
 
 const Home = ({ location, history, match }: Props) => {
-  const { onCounterLinkClick, onSubredditLinkClick } = handlers({
+  const { onCounterLinkClick, onSubredditLinkClick } = useHandlers({
     location,
     history,
     match,

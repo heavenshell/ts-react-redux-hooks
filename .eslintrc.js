@@ -20,9 +20,9 @@ module.exports = {
     'no-return-assign': 0,
     'no-console': 2,
     'react-hooks/rules-of-hooks': 'error',
-    'react/display-name': false,
+    'react/display-name': 0,
     'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
-    'react/prop-types': false,
+    'react/prop-types': 0,
   },
   settings: {
     react: {

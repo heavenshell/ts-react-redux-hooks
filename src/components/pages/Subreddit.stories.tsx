@@ -34,7 +34,6 @@ const mockData = Array.from(new Array(10), () => ({
   permalink: internet.url(),
 }))
 
-
 storiesOf('pages/Subreddit', module)
   .add('default', () => (
     <Subreddit
@@ -43,12 +42,10 @@ storiesOf('pages/Subreddit', module)
       onSubmit={handleSubmit()}
       validationSchema={validationSchema}
       posts={mockData}
-      onLinkClick={
-        (e: React.MouseEvent<HTMLAnchorElement>) => {
-          e.preventDefault()
-          action('onLinkClick')(e.target)
-        }
-      }
+      onLinkClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault()
+        action('onLinkClick')(e.target)
+      }}
     />
   ))
   .add('isLoading', () => (
@@ -58,12 +55,10 @@ storiesOf('pages/Subreddit', module)
       onSubmit={handleSubmit()}
       validationSchema={validationSchema}
       posts={[]}
-      onLinkClick={
-        (e: React.MouseEvent<HTMLAnchorElement>) => {
-          e.preventDefault()
-          action('onLinkClick')(e.target)
-        }
-      }
+      onLinkClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault()
+        action('onLinkClick')(e.target)
+      }}
     />
   ))
   .add('no data', () => (
@@ -73,11 +68,9 @@ storiesOf('pages/Subreddit', module)
       onSubmit={handleSubmit()}
       validationSchema={validationSchema}
       posts={[]}
-      onLinkClick={
-        (e: React.MouseEvent<HTMLAnchorElement>) => {
-          e.preventDefault()
-          action('onLinkClick')(e.target)
-        }
-      }
+      onLinkClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault()
+        action('onLinkClick')(e.target)
+      }}
     />
   ))

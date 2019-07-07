@@ -1,0 +1,18 @@
+sudo: false
+cache:
+  yarn: true
+  directories:
+  - node_modules
+  - $HOME/.nvm
+language: node_js
+node_js: lts/*
+
+before_install:
+- curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.16.0
+- export PATH=$HOME/.yarn/bin:$PATH
+install:
+- yarn install
+script:
+- yarn lint
+- yarn test --maxWorkers=4
+- yarn build-storybook

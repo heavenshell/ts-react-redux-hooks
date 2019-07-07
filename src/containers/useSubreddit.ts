@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useCallback, useEffect } from 'react'
 
 import { parse } from 'query-string'
 import { useDispatch, useSelector } from 'react-redux'
@@ -34,24 +34,27 @@ export const mapDispatch = (
   fetchSubreddit: subbreddit => dispatch(fetchSubreddit(subbreddit)),
 })
 
-const subredditHandlers = ({ history, location }: RouteComponentProps) => {
-  const onSubmit: ViewProps['onSubmit'] = data => {
-    const { value } = parse(location.search)
-    if (value === data.subreddit) {
-      return
-    }
+export const subredditHandlers = ({ history, location }: RouteComponentProps) => {
+  const onSubmit: ViewProps['onSubmit'] = useCallback(
+    (data) => {
+      const { value } = parse(location.search)
+      if (value === data.subreddit) {
+        return
+      }
 
-    const nextPath = `/subreddit?value=${data.subreddit}`
-    return history.push(nextPath)
-  }
+      const nextPath = `/subreddit?value=${data.subreddit}`
+      return history.push(nextPath)
+    },
+    [location]
+  )
 
-  const onLinkClick = (
-    event: React.MouseEvent<HTMLAnchorElement>,
-    permalink: string
-  ) => {
-    event.preventDefault()
-    return window.open(`https://www.reddit.com/${permalink}`)
-  }
+  const onLinkClick = useCallback(
+    (event: React.MouseEvent<HTMLAnchorElement>, permalink: string) => {
+      event.preventDefault()
+      return window.open(`https://www.reddit.com/${permalink}`)
+    },
+    [location]
+  )
 
   return { onLinkClick, onSubmit }
 }
@@ -78,6 +81,7 @@ export const useSubreddit = ({
   match,
 }: RouteComponentProps) => {
   const dispatch = useDispatch()
+
   const { isLoading, posts, subreddit } = useSelector(
     mapProps({ location, history, match })
   )

@@ -31,6 +31,6 @@
     "@types/styled-components"
   ],
   "schedule": [
-      "schedule": "before 10pm"
+    "before 10pm"
   ]
 }

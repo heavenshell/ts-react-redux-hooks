@@ -93,10 +93,7 @@ const Subreddit: React.FC<Props> = ({
             >
               <List.Item.Meta
                 title={
-                  <a
-                    href="#"
-                    onClick={event => onLinkClick(event, item.permalink)}
-                  >
+                  <a onClick={event => onLinkClick(event, item.permalink)}>
                     {item.title}
                   </a>
                 }

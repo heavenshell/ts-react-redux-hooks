@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react'
 
 import Home from './Home'
 
-storiesOf('pages/Counter', module).add('default', () => (
+storiesOf('pages/Home', module).add('default', () => (
   <Home
     onCounterLinkClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
       e.preventDefault()

@@ -29,5 +29,4 @@ const Subreddit = ({ location, history, match }: Props) => {
     />
   )
 }
-
 export default Subreddit

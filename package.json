@@ -5,9 +5,9 @@
   "license": "BSD-3-Clause",
   "private": true,
   "dependencies": {
-    "@emotion/core": "10.0.14",
-    "@emotion/styled": "10.0.14",
-    "antd": "3.20.7",
+    "@emotion/core": "10.0.15",
+    "@emotion/styled": "10.0.15",
+    "antd": "3.21.2",
     "axios": "0.19.0",
     "emotion": "10.0.14",
     "formik": "1.5.8",
@@ -22,7 +22,7 @@
     "redux": "4.0.4",
     "redux-aggregate": "2.1.2",
     "redux-thunk": "2.3.0",
-    "styled-system": "5.0.16",
+    "styled-system": "5.0.21",
     "yup": "0.27.0"
   },
   "devDependencies": {

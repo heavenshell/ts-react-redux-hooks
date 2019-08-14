@@ -12,14 +12,16 @@ type RouterInitialProps = {
   search?: string
 }
 
-type Props = MemoryRouterProps &
+export type Props = MemoryRouterProps &
   RouterInitialProps & {
-    component: RouteProps['component']
+    component?: RouteProps['component']
+    render?: RouteProps['render']
     initialState?: ReduxState
   }
 
 const TestProvider: React.FC<Props> = ({
   component: Component,
+  render,
   initialState,
   paths,
   initialPath,
@@ -35,7 +37,12 @@ const TestProvider: React.FC<Props> = ({
       <MemoryRouter initialEntries={initialEntries} initialIndex={initialIndex}>
         <Switch>
           {paths.map(path => (
-            <Route key={path} path={path} component={Component} />
+            <Route
+              key={path}
+              path={path}
+              component={Component}
+              render={render}
+            />
           ))}
         </Switch>
       </MemoryRouter>

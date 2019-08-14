@@ -19,7 +19,8 @@ export type MapProps = {
 export const mapProps = ({ location }: RouteComponentProps) => ({
   subreddit,
 }: ReduxState): MapProps => {
-  const { value } = parse(location.search)
+  const { value } =
+    location.search === '' ? { value: '' } : parse(location.search)
   const posts = queries.getPosts(subreddit.children)
   return { isLoading: subreddit.isLoading, posts, subreddit: value }
 }

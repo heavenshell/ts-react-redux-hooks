@@ -13,10 +13,10 @@ type Values = {
   [key: string]: unknown
 }
 
-const handleSubmit = (
-  eventName: string = 'onSubmit',
-  timeout: number = 2000
-) => (data: Values, { setSubmitting }: FormikActions<Values>) => {
+const handleSubmit = (eventName = 'onSubmit', timeout = 2000) => (
+  data: Values,
+  { setSubmitting }: FormikActions<Values>
+) => {
   setTimeout(() => {
     setSubmitting(false)
     action(eventName)(data)

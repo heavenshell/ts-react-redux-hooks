@@ -2129,6 +2129,13 @@
     "@types/history" "*"
     "@types/react" "*"
 
+"@types/react-color@3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@types/react-color/-/react-color-3.0.1.tgz#5433e2f503ea0e0831cbc6fd0c20f8157d93add0"
+  integrity sha512-J6mYm43Sid9y+OjZ7NDfJ2VVkeeuTPNVImNFITgQNXodHteKfl/t/5pAR5Z9buodZ2tCctsZjgiMlQOpfntakw==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-dom@16.9.1":
   version "16.9.1"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.9.1.tgz#79206237cba9532a9f870b1cd5428bef6b66378c"
@@ -2219,15 +2226,7 @@
   resolved "https://registry.yarnpkg.com/@types/storybook__addon-actions/-/storybook__addon-actions-3.4.3.tgz#bb0c3fd066e1f495d3f2b724487e2b99194b3f1a"
   integrity sha512-RSFFfruUHL7La4CZpuiKZ0mZvr5orjenFA2jc31tfPwvA3fYNH4/9XSfA2MB08IpJbF3aErtYWT5Dtigkxnltg==
 
-"@types/storybook__addon-knobs@5.0.4":
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/@types/storybook__addon-knobs/-/storybook__addon-knobs-5.0.4.tgz#8d29b295459279a7a8e91cf2fffc99a3727258ea"
-  integrity sha512-B43R3SWGjQe/dyGpzjjCLloMBcxhHUtLOYv1EwIEiCBaZrz8h4ItdHA3yMX3GO6L6MyH9BVhNUUc9QzdfnyyjQ==
-  dependencies:
-    "@types/react" "*"
-    "@types/storybook__react" "*"
-
-"@types/storybook__react@*", "@types/storybook__react@4.0.2":
+"@types/storybook__react@4.0.2":
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/@types/storybook__react/-/storybook__react-4.0.2.tgz#f36fb399574c662e79c1a0cf6e429b6ff730da40"
   integrity sha512-U/+J5qccRdKFryvHkk1a0IeZaSIZLCmTwAQhTSDGeC3SPNIYPus+EtunBqP49r870l8czbfxtjeC3IL9P66ngQ==
@@ -12115,7 +12114,7 @@ react-clientside-effect@^1.2.0:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-react-color@^2.17.0:
+react-color@2.17.3, react-color@^2.17.0:
   version "2.17.3"
   resolved "https://registry.yarnpkg.com/react-color/-/react-color-2.17.3.tgz#b8556d744f95193468c7061d2aa19180118d4a48"
   integrity sha512-1dtO8LqAVotPIChlmo6kLtFS1FP89ll8/OiA8EcFRDR+ntcK+0ukJgByuIQHRtzvigf26dV5HklnxDIvhON9VQ==

@@ -40,7 +40,7 @@
     "@types/enzyme-adapter-react-16": "1.0.5",
     "@types/faker": "4.1.6",
     "@types/html-webpack-plugin": "3.2.1",
-    "@types/jest": "24.0.20",
+    "@types/jest": "24.0.19",
     "@types/mini-css-extract-plugin": "0.8.0",
     "@types/optimize-css-assets-webpack-plugin": "5.0.1",
     "@types/query-string": "5.1.0",
@@ -129,7 +129,7 @@
     ],
     "globals": {
       "ts-jest": {
-        "tsConfig": "<rootDir>config/tsconfig.test.json"
+        "tsConfig": "<rootDir>/config/tsconfig.test.json"
       }
     }
   },

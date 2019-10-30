@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import { Button, Card, Form, Input, List } from 'antd'
-import { FormikConfig, FormikProps, useFormik } from 'formik'
+import { FormikConfig, FormikHelpers, FormikProps, useFormik } from 'formik'
 
 export type Values = {
   subreddit: string
@@ -16,7 +16,7 @@ type ViewProps = {
 }
 
 type ActionProps = {
-  onSubmit: (data: Values) => void
+  onSubmit: (values: Values, formikHelpers: FormikHelpers<Values>) => void
   validationSchema?: FormikConfig<Values>['validationSchema']
   onLinkClick: (
     event: React.MouseEvent<HTMLAnchorElement>,

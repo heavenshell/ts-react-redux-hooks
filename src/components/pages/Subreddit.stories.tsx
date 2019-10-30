@@ -1,25 +1,21 @@
 import * as React from 'react'
 import * as yup from 'yup'
-import { FormikActions } from 'formik'
+import { FormikHelpers } from 'formik'
 
 import { action } from '@storybook/addon-actions'
 import { text } from '@storybook/addon-knobs'
 import { storiesOf } from '@storybook/react'
 import { image, internet, lorem } from 'faker'
 
-import Subreddit from './Subreddit'
-
-type Values = {
-  [key: string]: unknown
-}
+import Subreddit, { Values } from './Subreddit'
 
 const handleSubmit = (eventName = 'onSubmit', timeout = 2000) => (
-  data: Values,
-  { setSubmitting }: FormikActions<Values>
+  values: Values,
+  formikHelpers: FormikHelpers<Values>
 ) => {
   setTimeout(() => {
-    setSubmitting(false)
-    action(eventName)(data)
+    formikHelpers.setSubmitting(false)
+    action(eventName)(values)
   }, timeout)
 }
 

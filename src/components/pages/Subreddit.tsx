@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import { Button, Card, Form, Input, List } from 'antd'
-import { Formik, FormikActions, FormikConfig, FormikProps } from 'formik'
+import { FormikConfig, FormikHelpers, FormikProps, useFormik } from 'formik'
 
 export type Values = {
   subreddit: string
@@ -16,7 +16,7 @@ type ViewProps = {
 }
 
 type ActionProps = {
-  onSubmit: (data: Values, formikActions: FormikActions<Values>) => void
+  onSubmit: (values: Values, formikHelpers: FormikHelpers<Values>) => void
   validationSchema?: FormikConfig<Values>['validationSchema']
   onLinkClick: (
     event: React.MouseEvent<HTMLAnchorElement>,
@@ -34,49 +34,42 @@ const Subreddit: React.FC<Props> = ({
   posts,
   isLoading,
 }) => {
+  const formik = useFormik<Values>({
+    enableReinitialize: true,
+    initialValues,
+    onSubmit,
+    validationSchema,
+  })
   return (
     <React.Fragment>
       <Card>
-        <Formik
-          enableReinitialize={true}
-          initialValues={initialValues}
-          onSubmit={onSubmit}
-          render={({
-            touched,
-            errors,
-            handleBlur,
-            handleChange,
-            handleSubmit,
-            values,
-          }) => (
-            <Form onSubmit={handleSubmit}>
-              <Form.Item
-                colon={false}
-                help={touched.subreddit && errors.subreddit}
-                label="Subreddit"
-                required={true}
-                validateStatus={
-                  touched.subreddit && errors.subreddit ? 'error' : 'success'
-                }
-              >
-                <Input
-                  disabled={isLoading}
-                  id="subreddit"
-                  onBlur={handleBlur}
-                  onChange={handleChange}
-                  value={values.subreddit}
-                />
-              </Form.Item>
+        <Form onSubmit={formik.handleSubmit}>
+          <Form.Item
+            colon={false}
+            help={formik.touched.subreddit && formik.errors.subreddit}
+            label="Subreddit"
+            required={true}
+            validateStatus={
+              formik.touched.subreddit && formik.errors.subreddit
+                ? 'error'
+                : 'success'
+            }
+          >
+            <Input
+              disabled={isLoading}
+              id="subreddit"
+              onBlur={formik.handleBlur}
+              onChange={formik.handleChange}
+              value={formik.values.subreddit}
+            />
+          </Form.Item>
 
-              <Form.Item>
-                <Button type="primary" htmlType="submit" loading={isLoading}>
-                  Search
-                </Button>
-              </Form.Item>
-            </Form>
-          )}
-          validationSchema={validationSchema}
-        />
+          <Form.Item>
+            <Button type="primary" htmlType="submit" loading={isLoading}>
+              Search
+            </Button>
+          </Form.Item>
+        </Form>
       </Card>
       <Card>
         <List

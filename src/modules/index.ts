@@ -22,9 +22,13 @@ export const configureStore = (initialState?: ReduxState) => {
     subreddit,
   })
 
-  return createStore(rootReducer, initialState || {}, composeWithDevTools(
-    applyMiddleware(thunk as ThunkMiddleware<ReduxState, AnyAction, null>)
-  ) as StoreEnhancer<{
-    dispatch: ThunkDispatch<ReduxState, null, AnyAction>
-  }>)
+  return createStore(
+    rootReducer,
+    initialState || {},
+    composeWithDevTools(
+      applyMiddleware(thunk as ThunkMiddleware<ReduxState, AnyAction, null>)
+    ) as StoreEnhancer<{
+      dispatch: ThunkDispatch<ReduxState, null, AnyAction>
+    }>
+  )
 }

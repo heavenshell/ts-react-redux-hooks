@@ -29,10 +29,7 @@ const mapDispatch = (
   decrement: () => dispatch(decrement()),
 })
 
-const connector = connect(
-  mapProps,
-  mapDispatch
-)
+const connector = connect(mapProps, mapDispatch)
 
 const Counter = connector(({ count, increment, decrement }) => {
   return (

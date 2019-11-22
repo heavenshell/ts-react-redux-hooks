@@ -44,7 +44,7 @@
     "@types/mini-css-extract-plugin": "0.8.0",
     "@types/optimize-css-assets-webpack-plugin": "5.0.1",
     "@types/query-string": "5.1.0",
-    "@types/react": "16.9.11",
+    "@types/react": "16.9.12",
     "@types/react-color": "3.0.1",
     "@types/react-dom": "16.9.4",
     "@types/react-lifecycles-compat": "3.0.1",
@@ -63,7 +63,7 @@
     "css-loader": "3.2.0",
     "enzyme": "3.10.0",
     "enzyme-adapter-react-16": "1.15.1",
-    "eslint": "6.6.0",
+    "eslint": "6.7.0",
     "eslint-config-prettier": "6.7.0",
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-prettier": "3.1.1",
@@ -86,7 +86,7 @@
     "style-loader": "1.0.0",
     "terser-webpack-plugin": "2.2.1",
     "ts-config-webpack-plugin": "1.4.0",
-    "ts-jest": "24.1.0",
+    "ts-jest": "24.2.0",
     "ts-node": "8.5.2",
     "typescript": "3.7.2",
     "webpack": "4.41.2",
@@ -94,7 +94,7 @@
     "webpack-dev-server": "3.9.0"
   },
   "resolutions": {
-    "@types/react": "16.9.11",
+    "@types/react": "16.9.12",
     "@types/react-dom": "16.9.4",
     "@types/hoist-non-react-statics": "3.3.1",
     "hoist-non-react-statics": "^3.3.0"

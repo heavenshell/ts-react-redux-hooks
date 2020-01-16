@@ -7,10 +7,10 @@
   "dependencies": {
     "@emotion/core": "10.0.27",
     "@emotion/styled": "10.0.27",
-    "antd": "3.26.6",
+    "antd": "3.26.7",
     "axios": "0.19.1",
     "emotion": "10.0.27",
-    "formik": "2.1.1",
+    "formik": "2.1.2",
     "libreact": "2.13.2",
     "path-to-regexp": "6.1.0",
     "query-string": "5.1.1",

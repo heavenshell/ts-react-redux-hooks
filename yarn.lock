@@ -2593,10 +2593,10 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.3.tgz#bdfd69d61e464dcc81b25159c270d75a73c1a636"
   integrity sha512-Il2DtDVRGDcqjDtE+rF8iqg1CArehSK84HZJCT7AMITlyXRBpuPhqGLDQMowraqqu1coEaimg4ZOqggt6L6L+A==
 
-"@types/mini-css-extract-plugin@0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@types/mini-css-extract-plugin/-/mini-css-extract-plugin-0.9.0.tgz#ab11dde0662e2e7c711acee554a8983c2e036c8b"
-  integrity sha512-y+/Z/FtQ0h0Ps9PYbYeBd9fVl1z4215gpvGcYfl20+jMWBngEKDNzQ2an2kz+cLL47SS6Y2f6Z4axdSoyNgNAw==
+"@types/mini-css-extract-plugin@0.9.1":
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/@types/mini-css-extract-plugin/-/mini-css-extract-plugin-0.9.1.tgz#d4bdde5197326fca039d418f4bdda03dc74dc451"
+  integrity sha512-+mN04Oszdz9tGjUP/c1ReVwJXxSniLd7lF++sv+8dkABxVNthg6uccei+4ssKxRHGoMmPxdn7uBdJWONSJGTGQ==
   dependencies:
     "@types/webpack" "*"
 

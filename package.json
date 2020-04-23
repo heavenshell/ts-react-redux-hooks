@@ -24,7 +24,7 @@
     "redux-aggregate": "2.1.2",
     "redux-thunk": "2.3.0",
     "styled-system": "5.1.5",
-    "yup": "0.28.3"
+    "yup": "0.28.4"
   },
   "devDependencies": {
     "@babel/core": "7.9.0",

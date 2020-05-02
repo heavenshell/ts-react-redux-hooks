@@ -43,7 +43,7 @@ const Subreddit: React.FC<Props> = ({
   return (
     <React.Fragment>
       <Card>
-        <Form onSubmit={formik.handleSubmit}>
+        <Form onSubmitCapture={formik.handleSubmit}>
           <Form.Item
             colon={false}
             help={formik.touched.subreddit && formik.errors.subreddit}

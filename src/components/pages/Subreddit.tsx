@@ -77,7 +77,7 @@ const Subreddit: React.FC<Props> = ({
           size="large"
           dataSource={posts}
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          renderItem={item => (
+          renderItem={(item) => (
             <List.Item
               key={item.title}
               extra={
@@ -86,7 +86,7 @@ const Subreddit: React.FC<Props> = ({
             >
               <List.Item.Meta
                 title={
-                  <a onClick={event => onLinkClick(event, item.permalink)}>
+                  <a onClick={(event) => onLinkClick(event, item.permalink)}>
                     {item.title}
                   </a>
                 }

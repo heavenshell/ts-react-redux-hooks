@@ -20,7 +20,11 @@ module.exports = {
             loader: 'less-loader',
             // import the antd theme, webpack build show .bezierEasingMixin error ?
             // https://github.com/ant-design/ant-design/issues/7927
-            options: { javascriptEnabled: true },
+            options: {
+              lessOptions: {
+                javascriptEnabled: true,
+              },
+            },
           },
         ],
       },

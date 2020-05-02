@@ -11,7 +11,7 @@ import { configureInitialState } from '../__fixtures__/state'
 import TestProvider from '../__fixtures__/TestProvider'
 
 describe('containers/useSubreddit', () => {
-  const Comp = createSink(props => props)
+  const Comp = createSink((props) => props)
 
   it('should call fetchSubreddit - value given', () => {
     const fetchSubreddit = jest

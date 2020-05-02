@@ -6,7 +6,7 @@ import { default as MiniCssExtractPlugin } from 'mini-css-extract-plugin'
 import { default as TerserPlugin } from 'terser-webpack-plugin'
 import { default as OptimizeCSSAssetsPlugin } from 'optimize-css-assets-webpack-plugin'
 
-// tslint:disable-next-line
+// eslint-disable-next-line
 const TsConfigWebpackPlugin = require('ts-config-webpack-plugin')
 
 const config: Configuration = {
@@ -30,7 +30,11 @@ const config: Configuration = {
             loader: 'less-loader',
             // import the antd theme, webpack build show .bezierEasingMixin error ?
             // https://github.com/ant-design/ant-design/issues/7927
-            options: { javascriptEnabled: true },
+            options: {
+              lessOptions: {
+                javascriptEnabled: true,
+              },
+            },
           },
         ],
       },

@@ -60,7 +60,7 @@ describe('modules/subreddit', () => {
     const store = configureStore()
     const action = store.dispatch(fetchSubreddit('cat'))
 
-    return action.then(data => {
+    return action.then((data) => {
       const { subreddit } = store.getState()
 
       expect(data).toEqual(mockData)

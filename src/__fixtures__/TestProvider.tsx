@@ -28,7 +28,7 @@ const TestProvider: React.FC<Props> = ({
   search,
 }) => {
   const initialEntries: MemoryRouterProps['initialEntries'] = paths.map(
-    path => ({ pathname: path, search })
+    (path) => ({ pathname: path, search })
   )
   const initialIndex = initialPath ? paths.indexOf(initialPath) : 0
 
@@ -36,7 +36,7 @@ const TestProvider: React.FC<Props> = ({
     <Provider store={configureStore(initialState)}>
       <MemoryRouter initialEntries={initialEntries} initialIndex={initialIndex}>
         <Switch>
-          {paths.map(path => (
+          {paths.map((path) => (
             <Route
               key={path}
               path={path}

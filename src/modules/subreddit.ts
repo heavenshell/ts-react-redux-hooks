@@ -83,7 +83,7 @@ export const fetchSubreddit: ActionCreator<ThunkAction<
 >> = (subreddit: string) => {
   const { started, resolved, rejected } = SubReddit.creators
 
-  return async dispatch => {
+  return async (dispatch) => {
     dispatch(started())
 
     try {

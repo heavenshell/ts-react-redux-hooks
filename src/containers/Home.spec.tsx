@@ -9,7 +9,7 @@ import TestProvider from '../__fixtures__/TestProvider'
 import Home, { useHandlers } from './Home'
 
 describe('<Home />', () => {
-  const Comp = createSink(props => props)
+  const Comp = createSink((props) => props)
 
   it('should onCounterLinkClick', () => {
     const renderer = mount(<TestProvider component={Comp} paths={['/']} />)

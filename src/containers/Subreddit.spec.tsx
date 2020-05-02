@@ -13,7 +13,7 @@ import { createSubreddit } from '../__fixtures__/subreddit'
 describe('<Subreddit />', () => {
   const mock = new MockAdapter(api)
   afterEach(mock.restore)
-  const Comp = createSink(props => props)
+  const Comp = createSink((props) => props)
 
   it('should be passed redux state', async () => {
     const paths = ['/subreddit']

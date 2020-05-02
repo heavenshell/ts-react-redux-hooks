@@ -32,7 +32,7 @@ export type MapDispatch = {
 export const mapDispatch = (
   dispatch: ThunkDispatch<ReduxState, null, AnyAction>
 ): MapDispatch => ({
-  fetchSubreddit: subbreddit => dispatch(fetchSubreddit(subbreddit)),
+  fetchSubreddit: (subbreddit) => dispatch(fetchSubreddit(subbreddit)),
 })
 
 export const useSubredditHandlers = ({
@@ -40,7 +40,7 @@ export const useSubredditHandlers = ({
   location,
 }: RouteComponentProps) => {
   const onSubmit: ViewProps['onSubmit'] = useCallback(
-    data => {
+    (data) => {
       const { value } = parse(location.search)
       if (value === data.subreddit) {
         return

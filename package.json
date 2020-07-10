@@ -44,7 +44,7 @@
     "@types/mini-css-extract-plugin": "0.9.1",
     "@types/optimize-css-assets-webpack-plugin": "5.0.1",
     "@types/query-string": "5.1.0",
-    "@types/react": "16.9.41",
+    "@types/react": "16.9.42",
     "@types/react-color": "3.0.4",
     "@types/react-dom": "16.9.8",
     "@types/react-lifecycles-compat": "3.0.1",
@@ -94,7 +94,7 @@
     "webpack-dev-server": "3.11.0"
   },
   "resolutions": {
-    "@types/react": "16.9.41",
+    "@types/react": "16.9.42",
     "@types/react-dom": "16.9.8",
     "@types/hoist-non-react-statics": "3.3.1",
     "hoist-non-react-statics": "^3.3.0"

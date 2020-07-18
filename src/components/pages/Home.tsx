@@ -2,7 +2,9 @@ import * as React from 'react'
 
 import { Divider } from 'antd'
 
-type ViewProps = {}
+type ViewProps = {
+  // Add view props here
+}
 
 type ActionProps = {
   onCounterLinkClick: (event: React.MouseEvent<HTMLAnchorElement>) => void

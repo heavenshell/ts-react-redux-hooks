@@ -1,0 +1,35 @@
+name: build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install dependencies
+      run: yarn install
+
+    - name: Lint and test
+      run: |
+        yarn lint
+        yarn test
+      env:
+        CI: true
+
+    - name: Build app & storybook
+      run: |
+        yarn build
+        mkdir -p "./dist/storybook/${{ github.head_ref }}"
+        yarn build-storybook -o "./dist/storybook/${{ github.head_ref }}"

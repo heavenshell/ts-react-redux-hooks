@@ -71,6 +71,7 @@
     "eslint-plugin-react-hooks": "4.0.8",
     "faker": "4.1.0",
     "html-webpack-plugin": "4.3.0",
+    "husky": "4.2.5",
     "jest": "26.1.0",
     "jest-enzyme": "7.1.2",
     "less": "3.12.2",
@@ -132,12 +133,6 @@
         "tsConfig": "<rootDir>/config/tsconfig.test.json"
       }
     }
-  },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "eslint --fix",
-      "git add"
-    ]
   },
   "husky": {
     "hooks": {

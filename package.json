@@ -7,7 +7,7 @@
   "dependencies": {
     "@emotion/core": "10.0.28",
     "@emotion/styled": "10.0.27",
-    "antd": "4.4.3",
+    "antd": "4.5.1",
     "axios": "0.19.2",
     "emotion": "10.0.27",
     "formik": "2.1.5",
@@ -18,13 +18,13 @@
     "react-color": "2.18.1",
     "react-dom": "16.13.1",
     "react-fast-compare": "3.2.0",
-    "react-redux": "7.2.0",
+    "react-redux": "7.2.1",
     "react-router-dom": "5.2.0",
     "redux": "4.0.5",
     "redux-aggregate": "2.1.2",
     "redux-thunk": "2.3.0",
     "styled-system": "5.1.5",
-    "yup": "0.29.1"
+    "yup": "0.29.2"
   },
   "devDependencies": {
     "@babel/core": "7.10.5",

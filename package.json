@@ -5,7 +5,7 @@
   "license": "BSD-3-Clause",
   "private": true,
   "dependencies": {
-    "@emotion/core": "10.0.34",
+    "@emotion/core": "10.0.35",
     "@emotion/styled": "10.0.27",
     "antd": "4.5.4",
     "axios": "0.19.2",

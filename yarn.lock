@@ -3361,10 +3361,10 @@ ansi-to-html@^0.6.11:
   dependencies:
     entities "^1.1.2"
 
-antd@4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/antd/-/antd-4.7.0.tgz#84527b3306b91af1784c37d5e0e311960f92f3ba"
-  integrity sha512-qXXgclUmx6InkNce5BsIie9GR/39FGsVikwTMObofnVVALv+uOLH4D14reX7K50QldDXHZ7jIPU1JTkcNgtBoA==
+antd@4.7.2:
+  version "4.7.2"
+  resolved "https://registry.yarnpkg.com/antd/-/antd-4.7.2.tgz#6be4c34de141786bbc5425c743d0a3b990042641"
+  integrity sha512-baMyvvNRB0rqhUxi4cSaH4AG9Cd2W7TjAJnOrVTow8y5E45g3JU31+dAVUHWvtht6LTiWh4BLiKfCdZrSYBeEA==
   dependencies:
     "@ant-design/colors" "^4.0.5"
     "@ant-design/css-animation" "^1.7.2"
@@ -3389,7 +3389,7 @@ antd@4.7.0:
     rc-image "~3.2.1"
     rc-input-number "~6.1.0"
     rc-mentions "~1.5.0"
-    rc-menu "~8.7.1"
+    rc-menu "~8.8.2"
     rc-motion "^2.2.0"
     rc-notification "~4.5.2"
     rc-pagination "~3.1.0"
@@ -3402,7 +3402,7 @@ antd@4.7.0:
     rc-steps "~4.1.0"
     rc-switch "~3.2.0"
     rc-table "~7.10.0"
-    rc-tabs "~11.6.0"
+    rc-tabs "~11.7.0"
     rc-textarea "~0.3.0"
     rc-tooltip "~5.0.0"
     rc-tree "~3.10.0"
@@ -12490,10 +12490,25 @@ rc-mentions@~1.5.0:
     rc-trigger "^5.0.4"
     rc-util "^5.0.1"
 
-rc-menu@^8.0.1, rc-menu@^8.6.1, rc-menu@~8.7.1:
+rc-menu@^8.0.1, rc-menu@^8.6.1:
   version "8.7.1"
   resolved "https://registry.yarnpkg.com/rc-menu/-/rc-menu-8.7.1.tgz#f3dcaeb25308568a07871b79f8ddd9515a64e8be"
   integrity sha512-CuuJ9oS1oPAfenqAMa3CZZE7RrPcPTHV3310cf6RO2uJgE9ztqasRFMEBwtruH16OexTr0igTCXySm+e2/TBQg==
+  dependencies:
+    "@babel/runtime" "^7.10.1"
+    classnames "2.x"
+    mini-store "^3.0.1"
+    omit.js "^2.0.0"
+    rc-motion "^2.0.1"
+    rc-trigger "^5.0.4"
+    rc-util "^5.0.1"
+    resize-observer-polyfill "^1.5.0"
+    shallowequal "^1.1.0"
+
+rc-menu@~8.8.2:
+  version "8.8.3"
+  resolved "https://registry.yarnpkg.com/rc-menu/-/rc-menu-8.8.3.tgz#feb8ba0371dd342fbf1052d4fcca7b669b0bf66a"
+  integrity sha512-C9sT0SBXmUbVWRUseXASousacRVPnOm5aXdyJR569WIvZwbs2IncpGNmAcft1R5ZuFE3Y+SZZ5FYvtGtbCzkIQ==
   dependencies:
     "@babel/runtime" "^7.10.1"
     classnames "2.x"
@@ -12626,10 +12641,10 @@ rc-table@~7.10.0:
     rc-util "^5.4.0"
     shallowequal "^1.1.0"
 
-rc-tabs@~11.6.0:
-  version "11.6.2"
-  resolved "https://registry.yarnpkg.com/rc-tabs/-/rc-tabs-11.6.2.tgz#0732a3f6ef36a14343f9afe47df7f29971e8020b"
-  integrity sha512-7Z5Lg+nP/H4V7dIlewrOC0+aogRVH3ASjTy4VIletYOeStGPWYSfwBnUTBdcCXcUuWuyyKnNkYrUD0yaRqUCIA==
+rc-tabs@~11.7.0:
+  version "11.7.0"
+  resolved "https://registry.yarnpkg.com/rc-tabs/-/rc-tabs-11.7.0.tgz#e03a03fbf5b8d04a1c9f12f24a621b1d7ff6a093"
+  integrity sha512-nYwQcgML2drM0iau4aa6HI4qyyZSW0WpspCAtO5KGjXwHzUJcvv3qgLVuoQOWQaDDHXkI9Jj8U7Y/Hcrdyj1Kw==
   dependencies:
     "@babel/runtime" "^7.11.2"
     classnames "2.x"

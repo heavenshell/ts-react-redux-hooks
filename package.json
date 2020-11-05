@@ -5,9 +5,9 @@
   "license": "BSD-3-Clause",
   "private": true,
   "dependencies": {
-    "@emotion/core": "10.0.35",
+    "@emotion/core": "10.1.1",
     "@emotion/styled": "10.0.27",
-    "antd": "4.7.3",
+    "antd": "4.8.0",
     "axios": "0.21.0",
     "emotion": "10.0.27",
     "formik": "2.2.1",

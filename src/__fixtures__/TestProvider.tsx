@@ -10,11 +10,12 @@ type RouterInitialProps = {
   initialPath?: string
   params?: RouteProps
   search?: string
+  isRedux?: boolean
 }
 
 export type Props = MemoryRouterProps &
   RouterInitialProps & {
-    component?: RouteProps['component']
+    component?: RouteProps['component'] | any // eslint-disable-line @typescript-eslint/no-explicit-any
     render?: RouteProps['render']
     initialState?: ReduxState
   }
@@ -26,28 +27,32 @@ const TestProvider: React.FC<Props> = ({
   paths,
   initialPath,
   search,
+  isRedux = true,
 }) => {
   const initialEntries: MemoryRouterProps['initialEntries'] = paths.map(
     (path) => ({ pathname: path, search })
   )
   const initialIndex = initialPath ? paths.indexOf(initialPath) : 0
 
-  return (
-    <Provider store={configureStore(initialState)}>
-      <MemoryRouter initialEntries={initialEntries} initialIndex={initialIndex}>
-        <Switch>
-          {paths.map((path) => (
-            <Route
-              key={path}
-              path={path}
-              component={Component}
-              render={render}
-            />
-          ))}
-        </Switch>
-      </MemoryRouter>
-    </Provider>
+  const Router = () => (
+    <MemoryRouter initialEntries={initialEntries} initialIndex={initialIndex}>
+      <Switch>
+        {paths.map((path) => (
+          <Route key={path} path={path} component={Component} render={render} />
+        ))}
+      </Switch>
+    </MemoryRouter>
   )
+
+  if (isRedux) {
+    return (
+      <Provider store={configureStore(initialState)}>
+        <Router />
+      </Provider>
+    )
+  }
+
+  return <Router />
 }
 
 export default TestProvider

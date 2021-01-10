@@ -10,7 +10,8 @@ const Routes = () => (
   <HashRouter>
     <Switch>
       <Route component={Home} exact={true} path={'/'} />
-      <Route component={Counter} exact={true} path={'/counter'} />
+      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+      <Route component={Counter as any} exact={true} path={'/counter'} />
       <Route component={Subreddit} exact={true} path={'/subreddit'} />
     </Switch>
   </HashRouter>

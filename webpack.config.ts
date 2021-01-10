@@ -1,13 +1,18 @@
+import os from 'os'
+
 import { Configuration } from 'webpack'
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
-// Plugins
-import { default as HtmlWebpackPlugin } from 'html-webpack-plugin'
-import { default as MiniCssExtractPlugin } from 'mini-css-extract-plugin'
-import { default as TerserPlugin } from 'terser-webpack-plugin'
-import { default as OptimizeCSSAssetsPlugin } from 'optimize-css-assets-webpack-plugin'
+// TODO https://github.com/TypeStrong/fork-ts-checker-webpack-plugin/pull/556
+// import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
 
-// eslint-disable-next-line
-const TsConfigWebpackPlugin = require('ts-config-webpack-plugin')
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const TerserPlugin = require('terser-webpack-plugin')
+
+const cpus = os.cpus().length
+const tsLoaderWorkers = cpus > 3 ? cpus - 2 : 1
 
 const config: Configuration = {
   devtool: 'source-map',
@@ -19,8 +24,40 @@ const config: Configuration = {
     path: `${__dirname}/dist`,
     publicPath: '/',
   },
+  devServer: {
+    historyApiFallback: {
+      rewrites: [{ from: /^\/*/, to: '/index.html' }],
+    },
+    host: '0.0.0.0',
+    port: 3000,
+    hot: true,
+    liveReload: true,
+  },
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        use: [
+          {
+            loader: 'cache-loader',
+          },
+          {
+            loader: 'ts-loader',
+            options: {
+              happyPackMode: true, // IMPORTANT! use happyPackMode mode to speed-up compilation and reduce errors reported to webpack
+              // transpileOnly: true, TODO
+            },
+          },
+          {
+            // run compilation threaded
+            loader: 'thread-loader',
+            options: {
+              // there should be 1 cpu for the fork-ts-checker-webpack-plugin
+              workers: tsLoaderWorkers,
+            },
+          },
+        ],
+      },
       {
         test: /\.less$/,
         use: [
@@ -42,10 +79,13 @@ const config: Configuration = {
   },
   performance: { hints: false },
   optimization: {
-    minimizer: [new TerserPlugin(), new OptimizeCSSAssetsPlugin({})],
+    minimizer: [new TerserPlugin(), new CssMinimizerPlugin()],
   },
   plugins: [
-    new TsConfigWebpackPlugin(),
+    // TODO
+    // new ForkTsCheckerWebpackPlugin({
+    //   async: true,
+    // }),
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',

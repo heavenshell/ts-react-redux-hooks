@@ -75,12 +75,9 @@ export default SubReddit.reducerFactory(initialState) as Reducer<
 >
 
 // Thunk Action
-export const fetchSubreddit: ActionCreator<ThunkAction<
-  Promise<SubRedditModel>,
-  ReduxState,
-  null,
-  AnyAction
->> = (subreddit: string) => {
+export const fetchSubreddit: ActionCreator<
+  ThunkAction<Promise<SubRedditModel>, ReduxState, null, AnyAction>
+> = (subreddit: string) => {
   const { started, resolved, rejected } = SubReddit.creators
 
   return async (dispatch) => {

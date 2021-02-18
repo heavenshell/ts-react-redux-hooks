@@ -102,7 +102,7 @@
   },
   "resolutions": {
     "@types/react": "16.14.4",
-    "@types/react-dom": "16.9.10",
+    "@types/react-dom": "16.9.11",
     "@types/hoist-non-react-statics": "3.3.1",
     "hoist-non-react-statics": "^3.3.0"
   },

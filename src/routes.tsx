@@ -2,9 +2,11 @@ import * as React from 'react'
 
 import { HashRouter, Route, Switch } from 'react-router-dom'
 
-import Counter from './containers/Counter'
+import _Counter from './containers/Counter'
 import Home from './containers/Home'
 import Subreddit from './containers/Subreddit'
+
+const Counter = _Counter as any // eslint-disable-line @typescript-eslint/no-explicit-any
 
 const Routes = () => (
   <HashRouter>

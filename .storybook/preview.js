@@ -3,6 +3,7 @@ import { configure, addDecorator } from '@storybook/react'
 import { withKnobs } from '@storybook/addon-knobs'
 import { configureViewport } from '@storybook/addon-viewport'
 import { addParameters } from '@storybook/react'
+import { withScreenshot } from 'storycap'
 
 import '../src/index.less'
 
@@ -40,3 +41,8 @@ addParameters({
     },
   },
 })
+
+// Storycap
+export const decorators = [
+  withScreenshot,
+]

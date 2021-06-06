@@ -16,14 +16,14 @@ export type MapProps = {
   subreddit: string
 }
 
-export const mapProps = ({ location }: RouteComponentProps) => ({
-  subreddit,
-}: ReduxState): MapProps => {
-  const { value } =
-    location.search === '' ? { value: '' } : parse(location.search)
-  const posts = queries.getPosts(subreddit.children)
-  return { isLoading: subreddit.isLoading, posts, subreddit: value }
-}
+export const mapProps =
+  ({ location }: RouteComponentProps) =>
+  ({ subreddit }: ReduxState): MapProps => {
+    const { value } =
+      location.search === '' ? { value: '' } : parse(location.search)
+    const posts = queries.getPosts(subreddit.children)
+    return { isLoading: subreddit.isLoading, posts, subreddit: value }
+  }
 
 export type MapDispatch = {
   fetchSubreddit: (subreddit: string) => Promise<SubRedditModel>

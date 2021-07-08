@@ -99,7 +99,7 @@
     "yarn": "1.22.10"
   },
   "resolutions": {
-    "@types/react": "17.0.13",
+    "@types/react": "17.0.14",
     "@types/react-dom": "17.0.8",
     "@types/hoist-non-react-statics": "3.3.1",
     "hoist-non-react-statics": "^3.3.0"

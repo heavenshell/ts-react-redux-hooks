@@ -86,7 +86,7 @@
     "redux-devtools-extension": "2.13.9",
     "storycap": "3.1.0",
     "style-loader": "2.0.0",
-    "terser-webpack-plugin": "5.2.1",
+    "terser-webpack-plugin": "5.2.3",
     "thread-loader": "3.0.4",
     "ts-config-webpack-plugin": "2.0.3",
     "ts-jest": "27.0.5",

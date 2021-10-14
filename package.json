@@ -9,7 +9,7 @@
     "@emotion/react": "11.4.1",
     "@emotion/styled": "11.3.0",
     "antd": "4.16.13",
-    "axios": "0.22.0",
+    "axios": "0.23.0",
     "emotion": "11.0.0",
     "formik": "2.2.9",
     "libreact": "2.13.3",
@@ -25,7 +25,7 @@
     "redux-aggregate": "2.1.2",
     "redux-thunk": "2.3.0",
     "styled-system": "5.1.5",
-    "yup": "0.32.9"
+    "yup": "0.32.11"
   },
   "devDependencies": {
     "@storybook/addon-actions": "6.3.7",

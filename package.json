@@ -6,7 +6,7 @@
   "private": true,
   "dependencies": {
     "@emotion/core": "11.0.0",
-    "@emotion/react": "11.4.1",
+    "@emotion/react": "11.5.0",
     "@emotion/styled": "11.3.0",
     "antd": "4.16.13",
     "axios": "0.23.0",

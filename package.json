@@ -6,9 +6,9 @@
   "private": true,
   "dependencies": {
     "@emotion/core": "11.0.0",
-    "@emotion/react": "11.6.0",
+    "@emotion/react": "11.7.0",
     "@emotion/styled": "11.6.0",
-    "antd": "4.17.1",
+    "antd": "4.17.2",
     "axios": "0.24.0",
     "emotion": "11.0.0",
     "formik": "2.2.9",
@@ -23,7 +23,7 @@
     "react-router-dom": "5.3.0",
     "redux": "4.1.2",
     "redux-aggregate": "2.1.2",
-    "redux-thunk": "2.4.0",
+    "redux-thunk": "2.4.1",
     "styled-system": "5.1.5",
     "yup": "0.32.11"
   },

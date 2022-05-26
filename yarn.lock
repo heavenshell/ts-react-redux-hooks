@@ -3675,6 +3675,11 @@
   resolved "https://registry.yarnpkg.com/@types/qs/-/qs-6.9.6.tgz#df9c3c8b31a247ec315e6996566be3171df4b3b1"
   integrity sha512-0/HnwIfW4ki2D8L8c9GVcG5I72s9jP5GSLVF0VIXDW00kmIpA6O33G7a8n59Tmh7Nz0WUC3rSb7PTY/sdW2JzA==
 
+"@types/qs@^6.9.7":
+  version "6.9.7"
+  resolved "https://registry.yarnpkg.com/@types/qs/-/qs-6.9.7.tgz#63bb7d067db107cc1e457c303bc25d511febf6cb"
+  integrity sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==
+
 "@types/query-string@5.1.0":
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/@types/query-string/-/query-string-5.1.0.tgz#7f40cdea49ddafa0ea4f3db35fb6c24d3bfd4dcc"
@@ -4694,16 +4699,17 @@ ansi-to-html@^0.6.11:
   dependencies:
     entities "^2.0.0"
 
-antd@4.20.5:
-  version "4.20.5"
-  resolved "https://registry.yarnpkg.com/antd/-/antd-4.20.5.tgz#ac6a35f8ed2703dc94ac4661d5d10a88912be457"
-  integrity sha512-43bV1y9pXsccMBmThEPnk0FdPPl5oqEZs8wneKEtdUm6RusmAHxxWnWGgoqdVsEP2ASRDcwyhECTLu2oPw88ug==
+antd@4.20.6:
+  version "4.20.6"
+  resolved "https://registry.yarnpkg.com/antd/-/antd-4.20.6.tgz#0d46a4b6128a717b4cad7ac6902311a0210f1d6f"
+  integrity sha512-JHEwCDjWTAJ1yxlC5QPb7LhRMvdhccN5lzMYDs72sp6VOiaXVGAlwols+F8nQQRaF9h/eA6yQyZ622y8b9vaoQ==
   dependencies:
     "@ant-design/colors" "^6.0.0"
     "@ant-design/icons" "^4.7.0"
     "@ant-design/react-slick" "~0.28.1"
     "@babel/runtime" "^7.12.5"
     "@ctrl/tinycolor" "^3.4.0"
+    "@types/qs" "^6.9.7"
     classnames "^2.2.6"
     copy-to-clipboard "^3.2.0"
     lodash "^4.17.21"

@@ -11,7 +11,7 @@
     "antd": "4.24.16",
     "axios": "0.28.1",
     "emotion": "11.0.0",
-    "formik": "2.4.5",
+    "formik": "2.4.6",
     "libreact": "2.13.3",
     "path-to-regexp": "6.2.2",
     "query-string": "5.1.1",

@@ -101,7 +101,7 @@
   "resolutions": {
     "@types/react": "17.0.66",
     "@types/react-dom": "17.0.21",
-    "@types/hoist-non-react-statics": "3.3.5",
+    "@types/hoist-non-react-statics": "3.3.6",
     "hoist-non-react-statics": "^3.3.0"
   },
   "scripts": {

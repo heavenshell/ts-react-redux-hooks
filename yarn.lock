@@ -3831,19 +3831,17 @@
     "@types/react" "*"
     "@types/reactcss" "*"
 
-"@types/react-dom@17.0.21", "@types/react-dom@>=16.9.0":
-  version "17.0.21"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.21.tgz#85d56965483ce4850f5f03f9234e54a1f47786e5"
-  integrity sha512-3rQEFUNUUz2MYiRwJJj6UekcW7rFLOtmK7ajQP7qJpjNdggInl3I/xM4I3Hq1yYPdCGVMgax1gZsB7BBTtayXg==
-  dependencies:
-    "@types/react" "^17"
-
 "@types/react-dom@17.0.9":
   version "17.0.9"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.9.tgz#441a981da9d7be117042e1a6fd3dac4b30f55add"
   integrity sha512-wIvGxLfgpVDSAMH5utdL9Ngm5Owu0VsGmldro3ORLXV8CShrL8awVj06NuEXFQ5xyaYfdca7Sgbk/50Ri1GdPg==
   dependencies:
     "@types/react" "*"
+
+"@types/react-dom@19.2.2", "@types/react-dom@>=16.9.0":
+  version "19.2.2"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-19.2.2.tgz#a4cc874797b7ddc9cb180ef0d5dc23f596fc2332"
+  integrity sha512-9KQPoO6mZCi7jcIStSnlOWn2nEF3mNmyr3rIAsGnAbQKYbRLyqmeSc39EVgtxXVia+LMT8j3knZLAZAh+xLmrw==
 
 "@types/react-lifecycles-compat@3.0.1":
   version "3.0.1"
@@ -3900,13 +3898,11 @@
   dependencies:
     "@types/react" "^16"
 
-"@types/react@*", "@types/react@17.0.66", "@types/react@>=16.9.0", "@types/react@^16", "@types/react@^16.8.22", "@types/react@^17":
-  version "17.0.66"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.66.tgz#4b3bfd6dd5ee37835f60d4a9325cff974b064126"
-  integrity sha512-azQzO1tuioq9M4vVKzzdBgG5KfLhyocYkRlJMBDcrJ7bUzyjR7QIGbZk2zH7sB5KpXRWoZJQ3CznVyhDS/swxA==
+"@types/react@*", "@types/react@19.2.2", "@types/react@>=16.9.0", "@types/react@^16", "@types/react@^16.8.22":
+  version "19.2.2"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-19.2.2.tgz#ba123a75d4c2a51158697160a4ea2ff70aa6bf36"
+  integrity sha512-6mDvHUFSjyT2B2yeNx2nUgMxh9LtOWvkhIU3uePn2I2oyNymUAX1NIsdgviM4CH+JSrp2D2hsMvJOkxY+0wNRA==
   dependencies:
-    "@types/prop-types" "*"
-    "@types/scheduler" "*"
     csstype "^3.0.2"
 
 "@types/react@17.0.19":
